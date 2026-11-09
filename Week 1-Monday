@@ -1,0 +1,19 @@
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+        System.out.println("Krishna Sree"+" "+"21"+" "+"Shri Vishnu Engineering College for women");
+        System.out.println("Satvika"+" "+"22"+" "+" SVECW");
+        System.out.println("Java is high level programming language\nIt runs on the principle WORA\nIt is robust,portable");
+       /*java 15+ to print multiple lines System.out.println("""Object Oriented
+                          simple and easy to learn
+                          multithreaded
+            """);*/
+        System.out.println("I woke up at 10 am\nI watch reels\nI eat breakfast\nI watch reels\nI eat lunch\n I watch reeels\n I sleep\nI watch reels");
+        System.out.println("Java virtual machine is where the byte code is executed");
+        System.out.println("Java's first name is Oak,later renamed after java Cofeee");
+        System.out.println("Name:Krishna Sree\nAge:21\nIntial:Bonam\nstatus:unemployed\nmarital status:single\n");
+            System.out.println("Name:Satvika\nAge:22\nIntial:Jakkumpudi\nstatus:unemployed\nmarital status:single\n");
+        
+        
+    }
+}
