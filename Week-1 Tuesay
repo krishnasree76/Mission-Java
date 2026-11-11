@@ -1,0 +1,67 @@
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        //PRIMITIVE DATATYPES
+        byte a=12;
+        short b=123;
+        int c=123456789;
+        long d= 1234567890;
+        float e=12.8f;
+        double f=1233.33333333333333333333333333333333333;
+        char g='A';
+        boolean h=true;
+        System.out.println(a+"\n"+b+"\n"+ c +"\n"+ d +"\n"+ e +"\n"+ f +"\n"+g +"\n" +h);
+        //ABOUT
+        String name = "Krishna Sree";
+        byte age = 21;
+        float cgpa = 9.1f;
+        String collegename = "Shri Vishnu Engineering College For Women";
+        System.out.println(name+"\n"+age+"\n"+cgpa+"\n"+collegename);
+        //SUM OF TWO NUMBERS
+        int u=4609;
+        int k=1234;
+        int sum=u+k;
+        System.out.println(sum);
+        System.out.println(a+b);
+        //AVERAGE OF 5 SUBJECTS
+        float maths=72.5f;
+        int english=70;
+        float physics=71.5f;
+        int biology=75;
+        int telugu=99;
+        System.out.println((maths+english+physics+biology+telugu)/5);
+        Scanner s=new Scanner(System.in);
+        //CELSIUS TO FARENHEIT
+        System.out.println("celcius:");
+        double celsius=s.nextDouble();
+        double farenheit=(celsius*1.8)+32;
+        System.out.println(farenheit);
+        //SIMPLE INTEREST
+        int p = s.nextInt();
+        int t = s.nextInt();
+        float r=s.nextFloat();
+        double si=(p*t*r)/100;
+        System.out.println(si);
+        //SWAP TWO NUMBERS USING THIRD VARIABLE
+        int ab=5;
+        int bc=6;
+        int temp;
+        temp=ab;
+        ab=bc;
+        bc=temp;
+        System.out.println(ab+"\n"+bc);
+        //SWAP TWO NUMBERS WITHOUT A THIRD VARIABLE
+        int x=10;
+        int y=20;
+        x=x+y;
+        y=x-y;
+        x=x-y;
+        System.out.println(x+"\n"+y);
+        //STUDENT MARKS CARD
+        double total=(maths+english+physics+biology+telugu);
+        double avg=(maths+english+physics+biology+telugu)/5;
+        double percentage=(avg/100)*100;
+    System.out.println(name+"\n"+"Maths:"+maths+"\n"+"English:"+english+"\n"+"Physics:"+physics+"\n"+"Biology:"+biology+"\n"+"Telugu:"+telugu+"\n"+"Total:"+total+"\n"+"Average:"+avg+"\n"+"Percentage:"+percentage);
+    }
+}
