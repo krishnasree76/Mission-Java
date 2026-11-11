@@ -1,0 +1,54 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner s =new Scanner(System.in);
+        //Take two numbers as input and perform all arithmetic operations.
+        int a =s.nextInt();
+        int b=s.nextInt();
+        float c=s.nextFloat();
+        float d=s.nextFloat();
+        System.out.println(a+b);
+        System.out.println(c-d);
+        System.out.println(a*c);
+        System.out.println(b/d);
+        System.out.println(a%d);
+        System.out.println(a++);
+        System.out.println(--c);
+        System.out.println(++b);
+        System.out.println(d--);
+        
+        //Find the remainder of two numbers.
+         System.out.println(a%b);
+        //Take student marks and calculate percentage.
+        float m=s.nextFloat();
+        float p=s.nextFloat();
+        float c=s.nextFloat();
+        float percentage=((m+p+c)/300)*100;
+        System.out.println(percentage+"%");
+
+        //Convert rupees to paise.
+        float rupees=s.nextFloat();
+        float paisa=rupees*100;
+        System.out.println(paisa);
+
+        //Calculate the area and perimeter of a rectangle.
+        int length=s.nextInt();
+        int breadth=s.nextInt();
+        int perimeter=2*(length+breadth);
+        System.out.println(perimeter);
+        System.out.println("Area:"+(length*breadth));
+
+        //Calculate the area of a circle.
+        int r=s.nextInt();
+        System.out.println(3.14*r*r);
+
+        //Take a person's age and display their age after 5 years.
+        int age=s.nextInt();
+        age+=5;
+        System.out.println(age);
+
+        //Take input for a person's name and print a welcome message.
+        String name=s.next();
+        System.out.println("welcome to "+name);
+    }
+}
