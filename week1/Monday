@@ -14,6 +14,5 @@ class Main {
         System.out.println("Name:Krishna Sree\nAge:21\nIntial:Bonam\nstatus:unemployed\nmarital status:single\n");
             System.out.println("Name:Satvika\nAge:22\nIntial:Jakkumpudi\nstatus:unemployed\nmarital status:single\n");
         
-        
     }
 }
