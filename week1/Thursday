@@ -1,0 +1,164 @@
+import java.util.*;
+import java.time.Year;
+class Main {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+      //Check whether a number is positive, negative or zero.
+        if(a>0){
+            System.out.println(a+" is positive");
+        }else if(a<0){
+            System.out.println(a+" is negative");
+        }else{
+            System.out.println(a+" is zero");
+        }
+
+      //Check whether a number is even or odd.
+      if((a%2)==0){
+        System.out.println(a+" is even number");
+      }else{
+        System.out.println(a+" is odd number");
+      }
+
+    //Find the largest of two numbers.
+      int b=s.nextInt();
+      if(a>b){
+        System.out.println(a+" is greater");
+      }else if(b>a){
+        System.out.println(b+" is greater");
+      }else{
+        System.out.println("Both are equal");
+      }
+
+      //Find the largest of three numbers.
+      int c = s.nextInt();
+      if((a>=b) && (a>=c) ){
+        System.out.println(a+" is greater");
+      }else if((b>=c) && (b>=a) ){
+        System.out.println(b+" is greater");
+      }else{
+        System.out.println(c+" is greater");
+      }
+
+      //Check whether a person is eligible to vote.
+      int age=s.nextInt();
+      if(age>=18){
+        System.out.println("Eligible to vote");
+      }else{
+        System.out.println("Not Eligible to vote");
+      }
+
+      //Check whether a year is a leap year.
+      //Method-1
+      int year=s.nextInt();
+      if(Year.isLeap(year)){
+        System.out.println("year is leap");
+      }else{
+        System.out.println("year is not leap");
+      }
+      //Method-2
+      boolean isLeap = (year % 4 ==0 && year%100!=0 || (year%400==0));
+      if(isLeap){
+        System.out.println(year+" is a leap year");
+      }else{
+        System.out.println(year+" is not a leap year");
+      }
+
+      //Grade calculator based on marks.
+      int marks=s.nextInt();
+      String result=(marks>=90) ? "Grade A+" :
+                    (marks>=80) ? "Grade A"  :
+                    (marks>=70) ? "Grade B"  :
+                    (marks>=50) ? "Grade C"  : "Grade F";
+      System.out.println("Result: "+result);
+
+      //Check whether a character is a vowel or consonant.
+      char c=s.next().charAt(0);
+      if(c=='A' || c=='E' || c=='I' || c=='O' || c=='U' || c=='a'||c=='e'||c=='i'||c=='o'||c=='u'){
+        System.out.println(c+" is vowel");
+      }else{
+        System.out.println(c+" is consonant");
+      }
+      
+      //Build a calculator using switch.
+
+      int x=s.nextInt();
+      System.out.println("Enter the sign:+,-,*,/,%");
+      char operator = s.next().charAt(0);
+      int y=s.nextInt();
+      int result=0;
+      switch(operator){
+        case '+':
+          result = x+y;
+          break;
+        case '-':
+          result=x-y;
+          break;
+        case '*':
+          result=x*y;
+          break;
+        case '/':
+          if(y!=0){
+            result=x/y;
+          }else{
+            System.out.println("Error:cannot divide by zero");
+          }
+          break;
+        case '%':
+          if(y!=0){
+            result=x%y;
+          }else{
+            System.out.println("Error:cannot divide by zero");
+          }
+          break;
+        default:
+          System.out.println("invalid operators");
+          
+      }
+      System.out.println(result);
+
+      //Check whether a number is divisible by both 5 and 11.
+      int d=s.nextInt();
+      if((d%5==0)&&(d%11==0)){
+        System.out.println(d+" is divisble by both 5 and 11");
+      }else{
+        System.out.println(d+" is not divisble by both 5 and 11");
+      }
+
+//Challenge: Build a student result management program.
+/*Requirements:
+Accept student name.
+Accept five subject marks.
+Calculate total and percentage.
+Display grade based on percentage.
+Display pass or fail.
+Validate that marks are between 0 and 100*/
+      String name=s.next();
+      float mat=s.nextFloat();
+      float phy=s.nextFloat();
+      float che=s.nextFloat();
+      float bio=s.nextFloat();
+      float soc=s.nextFloat();
+      double total=(mat+phy+che+bio+soc);
+      double per=((total)/500)*100;
+      System.out.println("Total :"+total);
+      System.out.println("Percentage :"+per);
+      if(per>=90){
+        System.out.println("Grade A+");
+      }else if(per>=80){
+        System.out.println("Grade A");
+      }else if(per>=70){
+        System.out.println("Grade B");
+      }else if(per>=50){
+        System.out.println("Grade D");
+      }else{
+        System.out.println("Grade F");
+      }
+      String result = (per>70) ? "Pass":"Fail";
+      System.out.println(result);
+      
+
+
+        
+    }
+}
