@@ -1,0 +1,155 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        //Print numbers from 1 to 100.
+        for(int i=1;i<=100;i++){
+            System.out.print(i+" ");
+        }
+
+        //Print even numbers from 1 to 100.
+        for(int i=1;i<=100;i++){
+            if(i%2==0){
+                System.out.print(i+" ");
+            }
+        }
+
+        //Print odd numbers from 1 to 100.
+        for(int i=1;i<=100;i++){
+            if(i%2!=0){
+                System.out.print(i+" ");
+            }
+        }
+
+        //Print the multiplication table of a number.
+        int n=s.nextInt();
+        for(int i=1;i<=20;i++){
+            System.out.println(n+"*"+i+"="+n*i);
+        }
+
+        //Find the sum of the first N natural numbers.
+        int sum=0;
+        for(int i=1;i<=n;i++){
+            sum+=i;
+        }
+        System.out.println(sum);
+        //Find the factorial of a number.
+        int fact=1;
+        for(int i=n;i>=1;i--){
+            fact*=i;
+        }
+        System.out.println(fact);
+
+        //Reverse a number.
+            /*52%10->2
+            2*10+2->2
+            52/10->5
+            5%10->5
+            2*10+5->25*/
+        int rev = 0;
+        while(n!=0){
+            int digit = n % 10;
+            rev = rev *10 + digit;
+            n /= 10;
+        }
+        System.out.println("Reverse of number:"+rev);
+
+        //Count the digits in a number.
+        //234/10->23,23/10->3,
+        int count=0;
+        if(n==0){
+            count = 1;
+        }else{
+            while(n!=0){
+                n=n/10;
+                count++;
+            }
+        }
+        System.out.println("count :"+count);
+
+        //Find the sum of digits.
+        int sum=0;
+        while(n!=0){
+            int digit=n%10;
+            sum+=digit;
+            n/=10;   
+        }
+        System.out.println("sum: "+sum);
+
+        //Check whether a number is a palindrome.
+        int original=n;
+        int rev=0;
+        while(n!=0){
+            int digit=n%10;
+            rev=rev*10+digit;
+            n/=10;
+        }
+        if(original>=0 && original==rev){
+            System.out.println("Palindrome");
+        }else{
+            System.out.println("Not Palindrome");
+        }
+
+        //Check whether a number is prime.
+        // Check whether a number is prime.
+boolean isPrime = true;
+
+if (n <= 1) {
+    isPrime = false;
+} else {
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            isPrime = false;
+            break; // Stop checking once a divisor is found
+        }
+    }
+}
+
+if (isPrime) {
+    System.out.println("Prime");
+} else {
+    System.out.println("Not prime");
+}
+        //Print the Fibonacci series.
+        //0,1,1,2,3,5,8,13,----
+        //fn=f(n-1)+f(n-2)
+        int first=0;
+        int second=1;
+        int next=0;
+        for (int i = 0; i < n; i++) {
+            System.out.print(first + " ");
+
+            next = first + second;
+            first = second;
+            second = next;
+        }
+
+        //patterns
+
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print("* ");
+            }
+        System.out.println();
+        }
+
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(j+" ");
+            }
+        System.out.println();
+        }
+
+        for(int i=n;i>=1;i--){
+            for(int j=1;j<=i;j++){
+                System.out.print("* ");
+            }
+        System.out.println();
+        }
+
+
+
+
+        
+    }
+}
