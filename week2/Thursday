@@ -9,11 +9,11 @@ class Main {
         int min=Integer.MAX_VALUE;
         
         for(int i=0;i<m;i++){
-            //int add=0;
-            //int max=0;
+            int add=0;
+            int max=0;
             for(int j=0;j<n;j++){
                 a[i][j]=s.nextInt();
-                //System.out.print(a[i][j]+" ");
+                System.out.print(a[i][j]+" ");
                 //add+=a[i][j];
                 if(a[i][j]>max){
                     max=a[i][j];
@@ -21,14 +21,14 @@ class Main {
                     min=a[i][j];
                 }
             }
-            //add+=a[i][j];
-            //System.out.println("next row");
-            //System.out.println();
-            //System.out.println(add);
+            add+=a[i][j];
+            System.out.println("next row");
+            System.out.println();
+            System.out.println(add);
             System.out.println("Max: "+max);
             System.out.println("Min: "+min);
         }
-        /*for(int j=0;j<n;j++){
+        for(int j=0;j<n;j++){
             int sum=0;
             for(int i=0;i<m;i++){
                 System.out.println(a[j][i]);
@@ -37,7 +37,28 @@ class Main {
             System.out.print("next Column");
             System.out.println();
             System.out.println(sum);
-        }*/
+        }
+        Scanner s=new Scanner(System.in);
+        int m=s.nextInt();
+        int n=s.nextInt();
+        int a[][]=new int[m][n];
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                a[i][j]=s.nextInt();
+            }
+        }
+        int trans[][]=new int[n][m];
+        for(int i=0; i<m; i++) {
+    for(int j=0; j<n; j++) {
+        trans[j][i] = a[i][j];
+    }
+}
+        for(int i=0; i<n; i++) {
+    for(int j=0; j<m; j++) {
+        System.out.print(trans[i][j]+" ");
+    }
+    System.out.println();
+}
         
     }
 }
