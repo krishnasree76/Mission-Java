@@ -1,0 +1,75 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String s1=s.nextLine();
+        System.out.println(s1);
+        System.out.println(s1.length());
+        System.out.println(s1.toUpperCase());
+        System.out.println(s1.toLowerCase());
+        /*char s2[]=s1.toCharArray();
+        int vowels=0;
+        int consonants=0;
+        for(int i=0;i<s2.length;i++){
+            if(s2[i] == 'a' || s2[i] == 'e' ||
+                   s2[i] == 'i' || s2[i] == 'o' ||
+                   s2[i] == 'u'){
+                vowels++;
+            }else{
+                consonants++;
+            }
+        }*/
+        int vowels=0;
+        int consonants=0;
+                for (int i = 0; i < s1.length(); i++) {
+            char ch = Character.toLowerCase(s1.charAt(i));
+
+            if (ch >= 'a' && ch <= 'z') {
+                if (ch == 'a' || ch == 'e' || ch == 'i' ||
+                    ch == 'o' || ch == 'u') {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
+            }
+        }
+        System.out.println(vowels);
+        System.out.println(consonants);
+        String s3=s.nextLine().trim();
+        int count=0;
+        if(!s3.isEmpty()){
+            String words[]=s3.split("\\s+");
+            count=words.length;
+        }
+        System.out.println(count);
+        String s4=s.nextLine();
+        char c1[]=s4.toCharArray();
+        int left=0;
+        int right=c1.length-1;
+        while(left<right){
+            char temp=c1[left];
+            c1[left]=c1[right];
+            c1[right]=temp;
+            left++;
+            right--;
+        }
+        String rev=new String(c1);
+        System.out.println(rev);
+        if(s4.equalsIgnoreCase(rev)){
+            System.out.println("Palindrome");
+        }else{
+            System.out.println("Not Palindrome");
+        }
+        int countt;
+        System.out.println(s4.trim());
+        for(int i=0;i<c1.length;i++){
+            countt=0;
+            for(int j=0;j<c1.length;j++){
+                if(c1[i]==c1[j]){
+                    countt++;
+                }
+            }
+            System.out.println(c1[i]+": "+countt);
+        }
+    }
+}
