@@ -1,0 +1,27 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner s= new Scanner(System.in);
+        String s1=s.nextLine();
+        StringBuilder sb1= new StringBuilder(s1);
+        sb1.append(" Sree");
+        System.out.println(sb1);
+        sb1.insert(8,"Raja ");
+        System.out.println(sb1);
+        sb1.delete(8,12);
+        System.out.println(sb1);
+        //sb1.reverse();
+        //System.out.println(sb1);
+        sb1.insert(8,"-");
+        System.out.println(sb1);
+        sb1.replace(0,sb1.length(),"Uday Krishna");
+        System.out.println(sb1);
+        sb1.setCharAt(3,'i');
+        System.out.println(sb1);
+        StringBuilder sb2 = new StringBuilder();
+        for(int i = sb1.length() - 1; i >= 0; i--){
+            sb2.append(sb1.charAt(i));
+        }
+        System.out.println(sb2);
+    }
+}
