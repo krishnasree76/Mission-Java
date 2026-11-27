@@ -1,0 +1,111 @@
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        int n = s.nextInt();
+        int a[] = new int[n];
+
+        for(int i = 0; i < n; i++) {
+            a[i] = s.nextInt();
+        }
+//Search for an element using Linear Search.& find index
+        int target = s.nextInt();
+        boolean found = false;
+
+        for(int i = 0; i < n; i++) {
+            if(a[i] == target) {
+                System.out.println("Element found at: " + i);
+                found = true;
+                break;
+            }
+        }
+
+        if(!found) {
+            System.out.println("Element not found");
+        }
+    //no of occurences
+        for(int i=0;i<n;i++){
+            int count=0;
+            for(int j=0;j<n;j++){
+                if(a[i]==a[j]){
+                    count++;
+                }
+            }
+            System.out.println(a[i]+":"+count);
+        }
+        //insert,delete&update
+        int pos=s.nextInt();
+        int element=s.nextInt();
+        for(int i=n;i>pos;i--){
+            a[i]=a[i-1];
+        }
+        a[pos] = element;
+        for(int i=0;i<=n;i++){
+            System.out.print(a[i]+" ");
+        }
+        for(int i = pos; i < n - 1; i++){
+                a[i]=a[i+1];
+        }
+        for(int i=0;i<n-1;i++){
+            System.out.print(a[i]+" ");
+        }
+        for(int i=0;i<n;i++){
+            if(i==pos){
+                a[i]=element;
+            }
+        }
+        for(int i=0;i<n;i++){
+            System.out.print(a[i]+" ");
+        }
+//bubble sort
+        public class Main {
+    static void bubbleSort(int[] arr) {
+        for (int i = arr.length - 1; i > 0; i--) {
+            boolean swapped = false;
+            for (int j = 0; j < i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                    swapped = true;
+                }
+            }
+            if (!swapped) break; // already sorted
+        }
+    }
+//selection sort
+    public class Main {
+    static void insertionSort(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int key = arr[i];
+            int j = i - 1;
+            // Shift larger elements one slot to the right
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = key;
+        }
+    }
+//insertion sort
+        public class Main {
+    static void insertionSort(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int key = arr[i];
+            int j = i - 1;
+            // Shift larger elements one slot to the right
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = key;
+        }
+    }
+        
+    }
+}
